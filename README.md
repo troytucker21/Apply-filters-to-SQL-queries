@@ -41,14 +41,33 @@ The following code demonstrates how I created a SQL query to filter for login at
 
 <img src="https://imgur.com/DUIcb8v.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
+The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.
+ <br/>
+  <br/>
+
+Retrieve login attempts outside of Mexico  
+<br/>
+After investigating the organization’s data on login attempts, I believe there is an issue with the login attempts that occurred outside of Mexico. These login attempts should be investigated.
+
+The following code demonstrates how I created a SQL query to filter for login attempts that occurred outside of Mexico. 
+
+<img src="https://imgur.com/NWVJCGb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-Confirm your selection:  <br/>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred in countries other than Mexico. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with NOT to filter for countries other than Mexico. I used LIKE with MEX% as the pattern to match because the dataset represents Mexico as MEX and MEXICO. The percentage sign (%) represents any number of unspecified characters when used with LIKE. 
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Retrieve employees in Marketing
 <br />
+<br />
+My team wants to update the computers for certain employees in the Marketing department. To do this, I have to get information on which employee machines to update.
+<br />
+
+The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Marketing department in the East building.
+ <br/>
+  <br/>
+<img src="https://imgur.com/urPQesr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
 <br />
 Sanitization complete:  <br/>
 <img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
