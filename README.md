@@ -67,14 +67,50 @@ The following code demonstrates how I created a SQL query to filter for employee
   <br/>
 <img src="https://imgur.com/urPQesr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
+<br />
+The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Marketing department in the East building. First, I started by selecting all data from the employees table. Then, I used a WHERE clause with AND to filter for employees who work in the Marketing department and in the East building. I used LIKE with East% as the pattern to match because the data in the office column represents the East building with the specific office number. The first condition is the department = 'Marketing' portion, which filters for employees in the Marketing department. The second condition is the office LIKE 'East%' portion, which filters for employees in the East building.
+<br /> 
+<br />
 
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Retrieve employees in Finance or Sales
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The machines for employees in the Finance and Sales departments also need to be updated. Since a different security update is needed, I have to get information on employees only from these two departments.
+
+The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Finance or Sales departments.
+
+ <br/>
+
+<img src="https://imgur.com/PwHuTVR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments. First, I started by selecting all data from the employees table. Then, I used a WHERE clause with OR to filter for employees who e in the Finance and Sales departments. I used the OR operator instead of AND because I want all employees who are in either department. The first condition is department = 'Finance', which filters for employees from the Finance department. The second condition is department = 'Sales', which filters for employees from the Sales department.
+<br />
+<br />
+Retrieve all employees not in IT
+<br />
+<br />
+My team needs to make one more security update on employees who are not in the Information Technology department. To make the update, I first have to get information on these employees.
+<br />
+<br />
+The following demonstrates how I created a SQL query to filter for employee machines from employees not in the  Information Technology department.
+<br />
+<br />
+
+ <br/> 
+<img src="https://imgur.com/nkpsUK7.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. First, I started by selecting all data from the employees table. Then, I used a WHERE clause with NOT to filter for employees not in this department.
+<br />
+<br />
+Summary
+<br />
+<br />
+I applied filters to SQL queries to get specific information on login attempts and employee machines. I used two different tables, log_in_attempts and employees. I used the AND, OR, and NOT operators to filter for the specific information needed for each task. I also used LIKE and the percentage sign (%) wildcard to filter for patterns.
+
+
 </p>
 
 <!--
